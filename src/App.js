@@ -1,11 +1,18 @@
-import ReactDOM from 'react-dom';
+import Hero from './components/Hero/Hero.js';
+import SearchForm from './components/SearchForm/SearchForm.js';
+import List from './components/List/List.js';
+import Container from './components/Container/Container.js';
 import React from 'react';
-import App from './App';
-import './styles/normalize.scss';
-import './styles/global.scss';
-import 'font-awesome/css/font-awesome.min.css';
 
-ReactDOM.render(
-      <App />,
-  document.querySelector('#root')
-);
+
+const App = () => {
+  return (
+    <Container>
+      <Hero />
+      <SearchForm />
+      <List />
+    </Container>
+  );
+};
+
+export default App;

@@ -1,18 +1,17 @@
-import Hero from './components/Hero/Hero.js';
-import SearchForm from './components/SearchForm/SearchForm.js';
-import List from './components/List/List.js';
-import Container from './components/Container/Container.js';
+import ReactDOM from 'react-dom';
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store'
+import App from './App';
+import './styles/normalize.scss';
+import './styles/global.scss';
+import 'font-awesome/css/font-awesome.min.css';
 
-
-const App = () => {
-  return (
-    <Container>
-      <Hero />
-      <SearchForm />
-      <List />
-    </Container>
-  );
-};
-
-export default App;
+ReactDOM.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.querySelector('#root')
+);
