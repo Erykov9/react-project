@@ -1,6 +1,6 @@
 import PageTitle from "../PageTitle/PageTitle";
 
-const Favorite = (props) => { 
+const Favorite = () => { 
   return (
     <>
       <PageTitle>Favorite</PageTitle>
