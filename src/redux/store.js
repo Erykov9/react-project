@@ -13,6 +13,8 @@ export const addCard = payload => ({type: 'ADD_CARD', payload});
 
 export const addInput = payload => ({type: 'FILTER_STRING', payload});
 
+export const getListById = ({ lists }, listId) => lists.find(list => list.id === listId);
+
 
 
 const reducer = (state, action) => {
@@ -25,6 +27,7 @@ const reducer = (state, action) => {
 
     case 'FILTER_STRING':
       return {...state, input: action.payload};
+
     default:
       return state;
   }
