@@ -23,6 +23,12 @@ export const getAllLists = (state => state.lists);
 
 export const addList = payload => ({type: 'ADD_LIST', payload });
 
+export const getAllCards = (state => state.cards);
+
+export const addFavorite = payload => ({type: 'TOGGLE_CARD_FAVORITE', payload});
+
+export const getFavoriteList = state => state.cards.filter(card => card.isFavorite === true)
+
 
 
 const reducer = (state, action) => {
@@ -38,6 +44,9 @@ const reducer = (state, action) => {
 
     case 'ADD_LIST':
       return {...state, lists: [...state.lists, action.payload]}
+
+    case 'TOGGLE_CARD_FAVORITE':
+      return { ...state, cards: state.cards.map(card => (card.id === action.payload) ? { ...card, isFavorite: !card.isFavorite } : card) };
 
     default:
       return state;

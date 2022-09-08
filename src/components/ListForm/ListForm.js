@@ -15,8 +15,9 @@ const ListForm = () => {
 
   const submitHandler = e => {
     e.preventDefault();
-    dispatch(addList({ id: shortid(), title, description}))
-
+    dispatch(addList({ id: shortid(), title, description}));
+    setTitle('');
+    setDescription('');
   }
 
   return (
