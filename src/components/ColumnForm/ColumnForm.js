@@ -5,7 +5,7 @@ import { useState } from 'react';
 import React from 'react';
 import { useDispatch } from 'react-redux/es/exports';
 import shortid from 'shortid';
-import { addColumn } from '../../redux/store';
+import { addColumn } from '../../redux/columnsRedux';
 
 const ColumnForm = props => {
   const [title, setTitle] = useState('');

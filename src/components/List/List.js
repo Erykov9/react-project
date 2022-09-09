@@ -3,10 +3,10 @@ import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import React from 'react';
 import { useSelector } from 'react-redux/es/exports';
-import { getColumnsByList, getListById } from '../../redux/store';
+import { getColumnsByList} from '../../redux/columnsRedux';
 import SearchForm from '../SearchForm/SearchForm';
-
 import { useParams, Navigate } from 'react-router-dom';
+import { getListById } from '../../redux/listsRedux';
 
 const List = (props) => {
 

@@ -4,10 +4,7 @@ import Button from '../Button/Button';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { addInput, inputValue } from '../../redux/store';
-import initialState from '../../redux/initialState';
-
-
+import { addInput, inputValue } from '../../redux/searchStringRedux';
 
 const SearchForm = () => {
 

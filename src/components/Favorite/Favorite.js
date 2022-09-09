@@ -1,7 +1,7 @@
 import PageTitle from "../PageTitle/PageTitle";
 import styles from './Favorite.module.scss';
 import Card from "../Card/Card";
-import { getFavoriteList } from "../../redux/store";
+import { getFavoriteList } from "../../redux/cardsRedux";
 import { useSelector } from "react-redux";
 import shortid from "shortid";
 

@@ -3,7 +3,7 @@ import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
 import React from 'react';
 import { useDispatch } from 'react-redux/es/exports';
-import { addCard } from '../../redux/store';
+import { addCard } from '../../redux/cardsRedux';
 
 import { useState } from 'react';
 import shortid from 'shortid';
